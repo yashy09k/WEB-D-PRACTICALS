@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 min-h-screen py-10 px-4 font-sans text-gray-800">
+
+    <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-8">
+        
+        <div class="text-center mb-8">
+            <span class="inline-block bg-indigo-100 text-indigo-700 font-semibold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-2">
+                Practical No. 6
+            </span>
+            <h1 class="text-3xl font-extrabold text-gray-900">Marks Calculator</h1>
+            <p class="text-gray-500 text-sm mt-1">Enter marks for each subject below to calculate your grade</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200 mb-8">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-indigo-600 text-white text-sm uppercase tracking-wider">
+                        <th class="p-3 text-center border-b">#</th>
+                        <th class="p-3 border-b">Subject</th>
+                        <th class="p-3 border-b">Marks (out of 100)</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 bg-white text-sm">
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="p-3 text-center font-medium text-gray-500">1</td>
+                        <td class="p-3 font-semibold text-gray-700">DMGT</td>
+                        <td class="p-3">
+                            <input type="number" id="s1" min="0" max="100" placeholder="Enter marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="p-3 text-center font-medium text-gray-500">2</td>
+                        <td class="p-3 font-semibold text-gray-700">CAO</td>
+                        <td class="p-3">
+                            <input type="number" id="s2" min="0" max="100" placeholder="Enter marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="p-3 text-center font-medium text-gray-500">3</td>
+                        <td class="p-3 font-semibold text-gray-700">ED</td>
+                        <td class="p-3">
+                            <input type="number" id="s3" min="0" max="100" placeholder="Enter marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="p-3 text-center font-medium text-gray-500">4</td>
+                        <td class="p-3 font-semibold text-gray-700">ES</td>
+                        <td class="p-3">
+                            <input type="number" id="s4" min="0" max="100" placeholder="Enter marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="p-3 text-center font-medium text-gray-500">5</td>
+                        <td class="p-3 font-semibold text-gray-700">DSA</td>
+                        <td class="p-3">
+                            <input type="number" id="s5" min="0" max="100" placeholder="Enter marks" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button type="button" onclick="calc()" class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 cursor-pointer text-base">
+            Calculate Results
+        </button>
+
+        <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="bg-indigo-50 rounded-xl p-4 text-center border border-indigo-100">
+                <span class="text-xs text-indigo-500 uppercase font-bold tracking-wide">Total Marks</span>
+                <h3 id="totalmarks" class="text-2xl font-black text-indigo-900 mt-1">-</h3>
+            </div>
+            
+            <div class="bg-purple-50 rounded-xl p-4 text-center border border-purple-100">
+                <span class="text-xs text-purple-500 uppercase font-bold tracking-wide">Percentage</span>
+                <h3 id="Percentage" class="text-2xl font-black text-purple-900 mt-1">-</h3>
+            </div>
+            
+            <div class="bg-pink-50 rounded-xl p-4 text-center border border-pink-100">
+                <span class="text-xs text-pink-500 uppercase font-bold tracking-wide">Grade</span>
+                <h3 id="grade" class="text-2xl font-black text-pink-900 mt-1">-</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function calc() {
+            let sub1 = Number(document.getElementById("s1").value);
+            let sub2 = Number(document.getElementById("s2").value);
+            let sub3 = Number(document.getElementById("s3").value);
+            let sub4 = Number(document.getElementById("s4").value);
+            let sub5 = Number(document.getElementById("s5").value);
+
+            let total = sub1 + sub2 + sub3 + sub4 + sub5;
+            let per = (total / 500) * 100;
+            let grade = null;
+
+            if (per >= 85) {
+                grade = "A";
+            } else if (per >= 65) {
+                grade = "B";
+            } else if (per >= 45) {
+                grade = "C";
+            } else {
+                grade = "D";
+            }
+
+            document.getElementById("totalmarks").textContent = total + "/500";
+            document.getElementById("Percentage").textContent = per.toFixed(2) + "%";
+            document.getElementById("grade").textContent = grade;
+        }
+    </script>
+</body>
+</html>
