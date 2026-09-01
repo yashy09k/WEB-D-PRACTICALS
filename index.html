@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reusable UI Components - Tailwind CSS</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 via-cyan-100 to-indigo-200 min-h-screen">
+
+  <nav class="bg-blue-600 text-white p-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">BIRD COLLECTION</h1>
+
+      <div class="space-x-6">
+        <a href="#" class="hover:text-yellow-300">Home</a>
+        <a href="#" class="hover:text-yellow-300">Services</a>
+        <a href="#" class="hover:text-yellow-300">Models</a>
+        <a href="#" class="hover:text-yellow-300">Selected</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="text-center py-8">
+    <h2 class="text-3xl font-bold">Wild Birds</h2>
+    <p class="text-gray-600">
+      🦅 **Wings, Colors, and Flight: The Beauty of Avian Life**
+    </p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-5">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?q=80&w=800&auto=format&fit=crop"
+          alt="WATCH"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+            Scarlet Macaw
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Nature calls it plumage… I call what you’re doing to me an unfair explosion of color. 😏
+          </p>
+
+          <button class="bg-gradient-to-r from-orange-500 via-Amber-500 to-yellow-500 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:from-blue-600 hover:via-cyan-600 hover:to-teal-600 hover:scale-110 hover:shadow-2xl transition-all duration-500">
+            Buy
+          </button>
+
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop"
+          alt="watch"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+            Peregrine Falcon
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            I don’t need a dive glide to get closer to you… you’ve already captured my whole heart. 
+          </p>
+
+          <button class="bg-gradient-to-r from-green-500 via-lime-500 to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-md hover:from-green-600 hover:via-lime-600 hover:to-emerald-700 hover:-translate-y-1 hover:rotate-2 hover:shadow-xl transition-all duration-700">
+            Buy
+          </button>
+
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1518992028580-6d57bd80f2dd?q=80&w=800&auto=format&fit=crop"
+          alt="watch"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+             Kingfisher
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            Are you a Kingfisher? Because you dive straight into my heart at **300 km/h**. 🦅❤️
+          </p>
+
+          <button class="bg-gradient-to-r from-purple-600 via-pink-500 to-rose-500 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:from-purple-700 hover:via-pink-600 hover:to-rose-600 hover:scale-105 hover:animate-pulse hover:shadow-2xl transition-all duration-1000">
+            Buy
+          </button>
+
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1539664030488-bed403c073b3?q=80&w=800&auto=format&fit=crop"
+          alt="watch"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+             Golden Eagle
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            You’re like the Golden Eagle—not everyone understands the majesty, but I definitely do.
+          </p>
+
+          <button class="bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:from-blue-600 hover:via-cyan-600 hover:to-teal-600 hover:scale-110 hover:shadow-2xl transition-all duration-500">
+            Buy
+          </button>
+
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1551085254-e96b210df58a?q=80&w=800&auto=format&fit=crop"
+          alt="watch"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+            Snowy Owl
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+           Nature designed the Owl for silence, but you’re the reason my heart is racing. 🖤🦅 
+          </p>
+
+          <button class="bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:from-blue-600 hover:via-cyan-600 hover:to-teal-600 hover:scale-110 hover:shadow-2xl transition-all duration-500">
+            Buy
+          </button>
+
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1522921193457-27ddd522906d?q=80&w=800&auto=format&fit=crop"
+          alt="watch"
+          class="w-full h-48 object-cover"
+        >
+
+        <div class="p-5">
+
+          <h3 class="text-xl font-bold mb-2">
+            Hummingbird
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+           Are you a Hummingbird? Because I was trying to stay steady, but you just made my heart beat at the highest frequency. ❤️🦅
+
+          </p>
+
+          <button class="bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:from-blue-600 hover:via-cyan-600 hover:to-teal-600 hover:scale-110 hover:shadow-2xl transition-all duration-500">
+            Buy
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+ <footer class="mt-10 bg-gradient-to-r from-gray-900 via-slate-800 to-black text-white">
+
+  <div class="max-w-6xl mx-auto py-8 text-center">
+
+    <h2 class="text-2xl font-bold">
+      SB Jain Institute of Technology
+    </h2>
+
+    <p class="mt-2 text-gray-300">
+      Learning Modern Web Development using Tailwind CSS
+    </p>
+
+    <p class="mt-4 text-gray-400">
+      © 2026 All Rights Reserved
+    </p>
+
+  </div>
+
+</footer>
+
+<section class="max-w-6xl mx-auto my-10 px-5">
+
+  <h2 class="text-3xl font-bold text-center mb-6">
+    Tailwind CSS Classes Used
+  </h2>
+
+  <table class="w-full border border-gray-400 border-collapse bg-white shadow-lg">
+
+    <thead>
+
+      <tr class="bg-blue-600 text-white">
+
+        <th class="border p-3">CSS Class Name</th>
+        <th class="border p-3">Meaning (Why Used?)</th>
+        <th class="border p-3">Description</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td class="border p-2">bg-gradient-to-br</td>
+        <td class="border p-2">Creates a diagonal background gradient</td>
+        <td class="border p-2">Makes the page background attractive.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">from-blue-100</td>
+        <td class="border p-2">Starting gradient color</td>
+        <td class="border p-2">Begins the gradient with light blue.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">via-cyan-100</td>
+        <td class="border p-2">Middle gradient color</td>
+        <td class="border p-2">Creates a smooth transition between colors.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">to-indigo-200</td>
+        <td class="border p-2">Ending gradient color</td>
+        <td class="border p-2">Finishes the background with indigo.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">flex</td>
+        <td class="border p-2">Creates a Flexbox layout</td>
+        <td class="border p-2">Aligns navigation items horizontally.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">justify-between</td>
+        <td class="border p-2">Adds space between items</td>
+        <td class="border p-2">Places logo on the left and menu on the right.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">items-center</td>
+        <td class="border p-2">Centers items vertically</td>
+        <td class="border p-2">Keeps navigation items aligned.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">grid</td>
+        <td class="border p-2">Creates a Grid layout</td>
+        <td class="border p-2">Displays cards in rows and columns.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">grid-cols-1</td>
+        <td class="border p-2">One grid column</td>
+        <td class="border p-2">Used for mobile devices.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">md:grid-cols-2</td>
+        <td class="border p-2">Two columns on medium screens</td>
+        <td class="border p-2">Improves tablet layout.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">lg:grid-cols-3</td>
+        <td class="border p-2">Three columns on large screens</td>
+        <td class="border p-2">Displays three cards on desktops.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">rounded-lg</td>
+        <td class="border p-2">Rounds corners</td>
+        <td class="border p-2">Makes cards and buttons look modern.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">shadow-lg</td>
+        <td class="border p-2">Adds a large shadow</td>
+        <td class="border p-2">Highlights cards and buttons.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">overflow-hidden</td>
+        <td class="border p-2">Hides overflowing content</td>
+        <td class="border p-2">Keeps images inside the card boundaries.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">object-cover</td>
+        <td class="border p-2">Fits image without distortion</td>
+        <td class="border p-2">Ensures images fill their containers.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">font-bold</td>
+        <td class="border p-2">Makes text bold</td>
+        <td class="border p-2">Highlights important text and buttons.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">hover:scale-110</td>
+        <td class="border p-2">Enlarges element on hover</td>
+        <td class="border p-2">Creates an interactive zoom effect.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">hover:shadow-2xl</td>
+        <td class="border p-2">Increases shadow on hover</td>
+        <td class="border p-2">Makes the component stand out.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">hover:-translate-y-1</td>
+        <td class="border p-2">Moves element upward</td>
+        <td class="border p-2">Creates a lifting animation.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">hover:rotate-2</td>
+        <td class="border p-2">Rotates element slightly</td>
+        <td class="border p-2">Adds a playful hover effect.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">hover:animate-pulse</td>
+        <td class="border p-2">Applies pulse animation</td>
+        <td class="border p-2">Draws attention to the button.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">transition-all</td>
+        <td class="border p-2">Animates all supported properties</td>
+        <td class="border p-2">Provides smooth hover animations.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">duration-500</td>
+        <td class="border p-2">Animation duration</td>
+        <td class="border p-2">Controls how fast the animation completes.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">max-w-6xl</td>
+        <td class="border p-2">Sets maximum width</td>
+        <td class="border p-2">Keeps content centered and readable.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">mx-auto</td>
+        <td class="border p-2">Automatic horizontal margin</td>
+        <td class="border p-2">Centers the container horizontally.</td>
+      </tr>
+
+      <tr>
+        <td class="border p-2">min-h-screen</td>
+        <td class="border p-2">Minimum screen height</td>
+        <td class="border p-2">Ensures the background covers the full viewport.</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>
+
+</body>
+</html>
