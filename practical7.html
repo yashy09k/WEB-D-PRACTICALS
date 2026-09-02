@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Portal - Interactive FAQ</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Question Box Color */
+        .bg-custom-cyan {
+            background-color: #45FAFF !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-black flex items-center justify-center p-4 font-sans antialiased">
+
+    <!-- Card Container -->
+    <div class="bg-black border border-stone-800 p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+
+        <h2 class="text-3xl font-bold text-center text-[#45FAFF] mb-1">
+            Web Development Academy
+        </h2>
+
+        <p class="text-center mb-6 text-stone-300 font-medium italic text-base">
+            Enrollment & Course FAQs
+        </p>
+
+        <!-- FAQ 1 -->
+        <div class="mb-4">
+            <button class="question w-full text-left p-4 bg-custom-cyan hover:brightness-110 text-black rounded-xl font-bold text-lg transition-all duration-200 shadow-md">
+                Do I need prior coding experience?
+            </button>
+
+            <p class="answer hidden p-4 bg-white text-stone-900 text-base rounded-b-xl border border-stone-300 mt-1 leading-relaxed shadow-inner">
+                No prior coding knowledge is required.
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="mb-4">
+            <button class="question w-full text-left p-4 bg-custom-cyan hover:brightness-110 text-black rounded-xl font-bold text-lg transition-all duration-200 shadow-md">
+                How long do I have access to course materials?
+            </button>
+
+            <p class="answer hidden p-4 bg-white text-stone-900 text-base rounded-b-xl border border-stone-300 mt-1 leading-relaxed shadow-inner">
+                Once enrolled, you receive lifetime access to all courses
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="mb-4">
+            <button class="question w-full text-left p-4 bg-custom-cyan hover:brightness-110 text-black rounded-xl font-bold text-lg transition-all duration-200 shadow-md">
+                Are certificates provided upon completion?
+            </button>
+
+            <p class="answer hidden p-4 bg-white text-stone-900 text-base rounded-b-xl border border-stone-300 mt-1 leading-relaxed shadow-inner">
+                Yes, a verified digital certificate of completion is awarded after completing all required things
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        let questions = document.querySelectorAll(".question");
+
+        questions.forEach(function(question) {
+            question.addEventListener("click", function() {
+                let answer = question.nextElementSibling;
+                answer.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+</body>
+</html>
