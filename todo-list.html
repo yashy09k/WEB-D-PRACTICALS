@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal To-Do List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 min-h-screen flex items-center justify-center p-4 text-slate-100">
+
+    <div class="bg-slate-800/60 backdrop-blur-md border border-slate-700/50 w-full max-w-md p-6 rounded-2xl shadow-2xl">
+
+        <h1 class="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+            My To-Do List
+        </h1>
+
+        <div class="flex gap-2 mb-6">
+            <input id="task"
+                   type="text"
+                   placeholder="Add a new task..."
+                   class="bg-slate-900/80 border border-slate-700/60 text-slate-100 placeholder-slate-400 p-3 rounded-xl w-full focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
+
+            <button onclick="addTask()"
+                    class="bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-medium px-5 py-3 rounded-xl transition-all shadow-lg shadow-indigo-600/30">
+                Add
+            </button>
+        </div>
+
+        <ul id="list" class="space-y-3"></ul>
+
+    </div>
+
+    <script>
+        function addTask() {
+            var input = document.getElementById("task");
+            var taskText = input.value.trim();
+
+            if (taskText === "") {
+                alert("Please enter a task");
+            } else {
+                var list = document.getElementById("list");
+
+                var li = document.createElement("li");
+                li.className = "flex items-center justify-between bg-slate-900/40 border border-slate-800/80 p-3 rounded-xl hover:bg-slate-800/50 transition-all cursor-pointer group";
+
+                var span = document.createElement("span");
+                span.className = "flex-1 mr-2 text-slate-200 transition-all select-none";
+                span.textContent = taskText;
+                span.onclick = function() {
+                    span.classList.toggle("line-through");
+                    span.classList.toggle("text-slate-500");
+                };
+
+                var deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.className = "bg-rose-500/20 hover:bg-rose-500 text-rose-300 hover:text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-all opacity-80 group-hover:opacity-100";
+                deleteBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    li.remove();
+                };
+
+                li.appendChild(span);
+                li.appendChild(deleteBtn);
+                list.appendChild(li);
+
+                input.value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
